@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const lightAccentColor = Color.fromARGB(255, 0, 161, 201);
 const darkAccentColor = Colors.yellow;
 const greenColor = Colors.green;
+const blueColor = Colors.blue;
 const redColor = Colors.red;
 
 const backGroundColor = Color.fromARGB(255, 243, 243, 243);

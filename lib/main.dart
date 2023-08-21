@@ -1,9 +1,18 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:window_size/window_size.dart';
+
+import 'features/shell.dart';
 import 'themes/main_theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  if (!kIsWeb && (Platform.isLinux || Platform.isMacOS || Platform.isWindows)) {
+    setWindowMinSize(const Size(800, 800));
+  }
+
   runApp(const MyApp());
 }
 
@@ -19,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: MainTheme.lightTheme,
       darkTheme: MainTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: null,
+      home: const Shell(),
     );
   }
 }
