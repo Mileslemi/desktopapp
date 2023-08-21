@@ -1,1 +1,5 @@
 how to shorten nav bar to only icons
+
+You cant use mediaQuery.size in desktop app cause the app is resizeable
+
+use this ide as a learning tool, how it is displayed, how it resizes...

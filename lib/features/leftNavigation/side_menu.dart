@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/sizes.dart';
+import 'your_library.dart';
+
 class SideMenu extends StatelessWidget {
   const SideMenu({
     super.key,
@@ -11,10 +14,10 @@ class SideMenu extends StatelessWidget {
       height: double.infinity,
       width: 220,
       color: Theme.of(context).primaryColor,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: const [
-          Padding(
+      child: ListView(
+        physics: const ClampingScrollPhysics(),
+        children: [
+          const Padding(
             padding: EdgeInsets.all(16.0),
             child: Image(
               image: AssetImage("assets/spotify_logo.png"),
@@ -23,26 +26,33 @@ class SideMenu extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home),
-            title: Text(
+            leading: const Icon(Icons.home),
+            title: const Text(
               "Home",
               overflow: TextOverflow.ellipsis,
             ),
+            onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.search),
-            title: Text(
+            leading: const Icon(Icons.search),
+            title: const Text(
               "Search",
               overflow: TextOverflow.ellipsis,
             ),
+            onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.audiotrack),
-            title: Text(
+            leading: const Icon(Icons.audiotrack),
+            title: const Text(
               "Radio",
               overflow: TextOverflow.ellipsis,
             ),
-          )
+            onTap: () {},
+          ),
+          const SizedBox(
+            height: defaultSpacing,
+          ),
+          const YourLibrary()
         ],
       ),
     );

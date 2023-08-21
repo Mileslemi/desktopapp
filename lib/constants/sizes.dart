@@ -1,6 +1,6 @@
 const defaultMainPadding = 17.0; //for the top most widget in a screen
 
-const defaultSpacing = 12.0; //spacing between widgets
+const defaultSpacing = 15.0; //spacing between widgets
 
 const defaultBtnPadding = 14.0; //for common widgets
 
