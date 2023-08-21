@@ -1,4 +1,5 @@
 import 'package:desktopapp/constants/colors.dart';
+import 'package:desktopapp/features/side_menu.dart';
 import 'package:flutter/material.dart';
 
 class Shell extends StatelessWidget {
@@ -11,12 +12,8 @@ class Shell extends StatelessWidget {
         children: [
           Expanded(
             child: Row(
-              children: [
-                Container(
-                  height: double.infinity,
-                  width: 280,
-                  color: greenColor,
-                )
+              children: const [
+                SideMenu(),
               ],
             ),
           ),

@@ -1,16 +1,15 @@
-import 'package:flutter/cupertino.dart';
-import '../../constants/colors.dart';
+import 'package:flutter/material.dart';
 
 class SIconTheme {
   SIconTheme._();
 
   static IconThemeData lightIconTheme = const IconThemeData(
-    color: lightAccentColor,
+    color: Colors.black,
     size: 20,
   );
 
   static IconThemeData darkIconTheme = const IconThemeData(
-    color: darkAccentColor,
+    color: Colors.white,
     size: 20,
   );
 }

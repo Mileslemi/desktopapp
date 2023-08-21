@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
 import 'widget_themes/app_bar_theme.dart';
-import 'widget_themes/bottom_nav_bar_theme.dart';
 import 'widget_themes/elevated_button_theme.dart';
 import 'widget_themes/icon_theme.dart';
 import 'widget_themes/list_style_theme.dart';
@@ -16,9 +15,9 @@ class MainTheme {
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     primarySwatch: Colors.cyan,
+    primaryColor: backGroundColor,
     scaffoldBackgroundColor: backGroundColor,
     appBarTheme: SAppBarTheme.lightModeTheme,
-    bottomNavigationBarTheme: SBottomNavBarTheme.lightBottomNavigationBarTheme,
     textTheme: STextTheme.lightTextTheme,
     inputDecorationTheme: STextFormFieldTheme.lightTextFormFieldTheme,
     elevatedButtonTheme: SElevatedButtonTheme.lightElevatedButtonTheme,
@@ -33,7 +32,6 @@ class MainTheme {
     primaryColor: Colors.black,
     scaffoldBackgroundColor: const Color(0xFF121212),
     appBarTheme: SAppBarTheme.darkModeTheme,
-    bottomNavigationBarTheme: SBottomNavBarTheme.darkBottomNavigationBarTheme,
     textTheme: STextTheme.darkTextTheme,
     inputDecorationTheme: STextFormFieldTheme.darkTextFormFieldTheme,
     elevatedButtonTheme: SElevatedButtonTheme.darkElevatedButtonTheme,
