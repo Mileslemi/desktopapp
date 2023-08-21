@@ -14,8 +14,8 @@ class SideMenu extends StatelessWidget {
       height: double.infinity,
       width: 220,
       color: Theme.of(context).primaryColor,
-      child: ListView(
-        physics: const ClampingScrollPhysics(),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const Padding(
             padding: EdgeInsets.all(16.0),
