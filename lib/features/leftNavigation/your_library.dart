@@ -22,7 +22,7 @@ class _YourLibraryState extends State<YourLibrary> {
 
   @override
   void dispose() {
-    _scrollController!.dispose();
+    _scrollController?.dispose();
     super.dispose();
   }
 

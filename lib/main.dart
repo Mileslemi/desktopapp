@@ -10,7 +10,7 @@ import 'themes/main_theme.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   if (!kIsWeb && (Platform.isLinux || Platform.isMacOS || Platform.isWindows)) {
-    setWindowMinSize(const Size(800, 800));
+    setWindowMinSize(const Size(1000, 800));
   }
 
   runApp(const MyApp());
