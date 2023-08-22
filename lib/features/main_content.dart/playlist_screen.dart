@@ -1,7 +1,9 @@
+import 'package:desktopapp/constants/sizes.dart';
 import 'package:desktopapp/data/data.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/colors.dart';
+import 'playlist_btn.dart';
 import 'playlist_header.dart';
 
 class PlaylistScreen extends StatefulWidget {
@@ -104,7 +106,11 @@ class _PlaylistScreenState extends State<PlaylistScreen> {
             children: [
               PlaylistHeader(
                 playlist: widget.playlist,
-              )
+              ),
+              const SizedBox(
+                height: defaultSpacing,
+              ),
+              PlaylistButtons(followers: widget.playlist.followers)
             ],
           ),
         ),

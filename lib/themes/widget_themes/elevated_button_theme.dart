@@ -23,10 +23,10 @@ class SElevatedButtonTheme {
     elevation: 0,
     padding: const EdgeInsets.symmetric(
         vertical: verticalBtnPadding, horizontal: horizontalBtnPadding),
-    backgroundColor: darkAccentColor,
-    foregroundColor: darkColor,
+    backgroundColor: Colors.green,
+    foregroundColor: Colors.white,
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10))),
-    side: const BorderSide(color: darkAccentColor),
+    side: const BorderSide(color: Colors.green),
   ));
 }

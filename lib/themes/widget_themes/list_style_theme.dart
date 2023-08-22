@@ -11,7 +11,7 @@ class SListTileTheme {
   );
 
   static const darkListTileTheme = ListTileThemeData(
-    iconColor: darkAccentColor,
+    iconColor: Colors.white,
     dense: true,
   );
 }

@@ -48,6 +48,7 @@ class PlaylistHeader extends StatelessWidget {
               const SizedBox(height: defaultSpacing),
               Text(
                 "Created by ${playlist.creator} . ${playlist.songs.length} songs, ${playlist.duration} min",
+                overflow: TextOverflow.ellipsis,
               )
             ],
           ),
