@@ -1,4 +1,6 @@
+import 'package:desktopapp/features/main_content.dart/model/current_track.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../data/data.dart';
 
@@ -22,39 +24,44 @@ class TrackList extends StatelessWidget {
         DataColumn(label: Text("ALBUM")),
         DataColumn(label: Icon(Icons.access_time)),
       ],
-      rows: songs
-          .map(
-            (song) => DataRow(
-              onSelectChanged: (value) {},
-              cells: [
-                DataCell(
-                  Text(
-                    song.title,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ),
-                DataCell(
-                  Text(
-                    song.artist,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ),
-                DataCell(
-                  Text(
-                    song.album,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ),
-                DataCell(
-                  Text(
-                    song.duration,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                ),
-              ],
+      rows: songs.map((song) {
+        final selected =
+            context.watch<CurrentTrackModel>().selected?.id == song.id;
+        final textStyle = Theme.of(context).textTheme.bodyMedium?.apply(
+              color: selected ? Colors.green : Colors.grey,
+            );
+        return DataRow(
+          selected: selected,
+          onSelectChanged: (_) =>
+              context.read<CurrentTrackModel>().selectSong(song),
+          cells: [
+            DataCell(
+              Text(
+                song.title,
+                style: textStyle,
+              ),
             ),
-          )
-          .toList(),
+            DataCell(
+              Text(
+                song.artist,
+                style: textStyle,
+              ),
+            ),
+            DataCell(
+              Text(
+                song.album,
+                style: textStyle,
+              ),
+            ),
+            DataCell(
+              Text(
+                song.duration,
+                style: textStyle,
+              ),
+            ),
+          ],
+        );
+      }).toList(),
     );
   }
 }
