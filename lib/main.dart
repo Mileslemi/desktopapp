@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:desktopapp/features/main_content.dart/model/current_track.dart';
+import 'package:desktopapp/features/main_content.dart/model/current_track_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

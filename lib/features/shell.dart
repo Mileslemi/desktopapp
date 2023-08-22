@@ -1,8 +1,8 @@
-import 'package:desktopapp/constants/colors.dart';
 import 'package:desktopapp/features/leftNavigation/side_menu.dart';
 import 'package:flutter/material.dart';
 
 import '../data/data.dart';
+import 'currentTrack/current_track.dart';
 import 'main_content.dart/playlist_screen.dart';
 
 class Shell extends StatelessWidget {
@@ -25,11 +25,7 @@ class Shell extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            height: 54,
-            width: double.infinity,
-            color: blueColor,
-          )
+          const CurrentTrack()
         ],
       ),
     );
