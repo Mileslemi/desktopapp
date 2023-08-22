@@ -28,7 +28,7 @@ class CurrentTrack extends StatelessWidget {
               track: track,
             ),
             const Spacer(),
-            const MoreControls()
+            if (MediaQuery.of(context).size.width > 800) const MoreControls()
           ],
         ),
       ),
